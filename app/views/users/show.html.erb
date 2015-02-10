@@ -10,5 +10,12 @@
   <%= @user.email %>
 </p>
 
+<p>The items in your To-do List are:</p>
+  <ul>
+    <% @user.todos.each do |todo| %>
+    <li><%= todo.title %></li>
+    <% end %>
+  </ul>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
