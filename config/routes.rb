@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+  resources :users
+
   resources :todos
 
-  root to: 'todos#new'
+<<<<<<< Updated upstream
+  root 'todos#new'
+=======
+  root to: 'todos#index'
+>>>>>>> Stashed changes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
